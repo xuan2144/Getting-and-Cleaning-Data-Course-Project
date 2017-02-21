@@ -2,9 +2,11 @@
 
 This Repo includes 3 files:
 
-*-- ReadMe.md
-*-- CodeBook.md
-*-- run_analysis.R
+* ReadMe.md
+
+* CodeBook.md
+
+* run_analysis.R
 
 # About R script
 
