@@ -54,8 +54,8 @@ names(mean_std_data_actname) <- c("subject", "activity", "category", as.characte
 #the average of each variable for each activity and each subject
 #step1 - melt data with id: subject & activity, measure all other variables
 #step2 - cast data to get mean for variables
-datamelt <- melt(select(mean_std_data_actname, -category, -act_name), id=c("subject", "activity"))
-newdataset <- dcast(datamelt, subject+activity ~ variable, mean)
+datamelt <- melt(select(mean_std_data_actname, -category, -activity), id=c("subject", "act_name"))
+newdataset <- dcast(datamelt, subject + act_name ~ variable, mean)
 
 #write result tidy data into txt file
 write.table(newdataset, file = "./ProjectDataResult.txt", row.names = F)
