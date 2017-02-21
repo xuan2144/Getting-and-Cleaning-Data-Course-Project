@@ -38,7 +38,7 @@ test_data <- cbind(subject_test, y_test, x_test)
 merge_data <- rbind(train_data, test_data)
 
 #task2: Extracts only the measurements on the mean and standard deviation
-feature_lines <- grep("mean|std", features$V2)
+feature_lines <- grep("(mean\\(\\))|(std\\(\\))", features$V2)
 mean_std_data <- merge_data[, c(1, 2, 3, (feature_lines + 3))]
 
 #task3: Uses descriptive activity names to name the activities in the data set
